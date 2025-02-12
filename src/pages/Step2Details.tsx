@@ -3,7 +3,7 @@ import cloudDownload from "../assets/images/cloud-download.png";
 const Step2Details = () => {
   return (
     <main className="flex h-full w-full items-center justify-center px-5 pt-[26px] text-white">
-      <section className="border-greenish bg-LightGreen flex flex-col gap-8 rounded-[40px] border border-solid p-6">
+      <section className="border-greenish bg-LightGreen flex max-w-3xl flex-col gap-8 rounded-[40px] border border-solid p-6">
         <div>
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h1 className="font-jeju text-2xl">Ticket Selection</h1>
@@ -11,7 +11,7 @@ const Step2Details = () => {
           </div>
           <span></span>
         </div>
-        <div className="lg:border-bgGreen flex flex-col gap-8 lg:rounded-4xl lg:border lg:border-solid lg:p-6">
+        <div className="lg:border-bgGreen lg:bg-LightGreen flex flex-col gap-8 lg:rounded-4xl lg:border lg:border-solid lg:p-6">
           <div className="border-blackygreen relative flex flex-col gap-10 self-stretch rounded-3xl border-2 border-t-0 border-solid px-6 py-4 backdrop-blur-[7px]">
             <div className="flex flex-col items-center gap-2">
               <h1 className="text-whitish">Upload Profile Photo</h1>
@@ -84,7 +84,7 @@ const Step2Details = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <Link
-                  to="/details"
+                  to="/downloadticket"
                   className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center capitalize"
                 >
                   Get my free ticket
