@@ -45,7 +45,7 @@ const Step1Form = () => {
         <div className="lg:border-bgGreen lg:bg-LightGreen flex flex-col gap-8 lg:rounded-4xl lg:border lg:border-solid lg:p-6">
           <div className="border-blackygreen title-container relative flex flex-col gap-10 self-stretch rounded-3xl border-2 border-t-0 border-solid px-6 py-4 backdrop-blur-[7px]">
             <div className="flex w-full flex-col items-center gap-2">
-              <h2 className="font-rage text-whitish w-full text-center text-[47px] leading-10 font-normal">
+              <h2 className="font-rage text-whitish w-full text-center text-[47px] leading-10 font-normal md:text-[62px]">
                 Techember Fest '25
               </h2>
               <p className="w-full max-w-[340px] text-center text-sm leading-[21px]">
