@@ -12,18 +12,21 @@ export const formSchema = z.object({
       (value) => value.trim().split(" ").length >= 2,
       "Please enter your full name",
     ),
-  emailSchema: z
+  email: z
     .string()
-    .regex(EMAIL_REGEX, "Email must be in the format: name@provider.com"),
+    .regex(EMAIL_REGEX, "Please follow this format: name@provider.com"),
   profilePicture: z
-    .instanceof(File)
-    .refine(
-      (file) => !file || file.size <= MAX_FILE_SIZE,
-      "File must be less than 5MB",
-    )
-    .refine(
-      (file) => ACCEPTED_FILE_TYPES.includes(file.type),
-      "Only PNG, JPG, or PDF files are allowed",
-    ),
+    .instanceof(File, { message: "Please upload a valid file" })
+    .refine((file) => file.size <= MAX_FILE_SIZE, {
+      message: "File must be less than 5MB",
+    })
+    .refine((file) => ACCEPTED_FILE_TYPES.includes(file.type), {
+      message: "Only PNG, JPG, or PDF files are allowed",
+    }),
+
   request: z.string().optional(),
 });
+
+export type FormType = z.infer<typeof formSchema> & {
+  profilePicture: File | undefined;
+};

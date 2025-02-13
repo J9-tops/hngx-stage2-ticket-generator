@@ -1,3 +1,10 @@
+import {
+  FieldErrors,
+  UseFormClearErrors,
+  UseFormSetValue,
+} from "react-hook-form";
+import { FormType } from "../schema";
+
 export type AccessType = {
   id: "regularAccess" | "vipAccess" | "vvipAccess";
   price: string;
@@ -5,7 +12,7 @@ export type AccessType = {
   amount: number;
 };
 
-type User = {
+export type User = {
   name: string;
   email: string;
 };
@@ -16,4 +23,10 @@ export type TicketType = {
   profilePicture: string;
   user: User;
   request?: string;
+};
+
+export type Props = {
+  setValue?: UseFormSetValue<FormType>;
+  clearErrors?: UseFormClearErrors<FormType>;
+  errors: FieldErrors<FormType>;
 };

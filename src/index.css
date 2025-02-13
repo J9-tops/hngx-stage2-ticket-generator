@@ -50,6 +50,7 @@
   --color-greenishBorder: #133d44;
   --color-greenHover: #2c545b;
   --color-bgGreener: #041e23;
+  --color-hiddenBg: rgba(0, 0, 0, 0.2);
 }
 
 body {
