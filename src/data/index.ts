@@ -28,3 +28,6 @@ export const selectOptions = [
   { value: 4, label: "4" },
   { value: 5, label: "5" },
 ];
+
+export const STORAGE_KEY = "tickets";
+export const CURRENT_TICKET_KEY = "currentTicket";

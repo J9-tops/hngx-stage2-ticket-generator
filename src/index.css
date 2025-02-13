@@ -36,6 +36,9 @@
   --font-roboto: "Roboto", serif;
   --font-jeju: "Jeju", serif;
   --breakpoint-xs: 300px;
+  --breakpoint-i13: 350px;
+  --breakpoint-i14: 400px;
+  --breakpoint-i14p: 440px;
   --color-whitish: #fafafa;
   --color-blackish: #0a0c11;
   --color-greenish: #197686;

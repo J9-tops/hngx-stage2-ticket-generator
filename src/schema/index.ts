@@ -15,15 +15,17 @@ export const formSchema = z.object({
   email: z
     .string()
     .regex(EMAIL_REGEX, "Please follow this format: name@provider.com"),
-  profilePicture: z
-    .instanceof(File, { message: "Please upload a valid file" })
-    .refine((file) => file.size <= MAX_FILE_SIZE, {
-      message: "File must be less than 5MB",
-    })
-    .refine((file) => ACCEPTED_FILE_TYPES.includes(file.type), {
-      message: "Only PNG, JPG, or PDF files are allowed",
-    }),
-
+  profilePicture: z.union([
+    z
+      .instanceof(File, { message: "Please upload a valid file" })
+      .refine((file) => file.size <= MAX_FILE_SIZE, {
+        message: "File must be less than 5MB",
+      })
+      .refine((file) => ACCEPTED_FILE_TYPES.includes(file.type), {
+        message: "Only PNG, JPG, or PDF files are allowed",
+      }),
+    z.string().url(),
+  ]),
   request: z.string().optional(),
 });
 

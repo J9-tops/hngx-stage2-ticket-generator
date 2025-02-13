@@ -17,7 +17,7 @@ const Header = () => {
         <ul className="font-jeju text-greyish hidden items-center gap-4 text-lg md:flex">
           <li className="p-2.5">
             <NavLink
-              to="/events"
+              to="/"
               className={({ isActive }) => (isActive ? "text-white" : "")}
             >
               Events
@@ -25,7 +25,7 @@ const Header = () => {
           </li>
           <li className="p-2.5">
             <NavLink
-              to="/my-tickets"
+              to="/tickets"
               className={({ isActive }) => (isActive ? "text-white" : "")}
             >
               My Tickets
