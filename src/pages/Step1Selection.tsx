@@ -94,8 +94,8 @@ const Step1Form = () => {
                       <span className="text-sm">
                         {formData.ticket.id === ticket.id
                           ? ticket.amount - 1
-                          : ticket.amount}{" "}
-                        left
+                          : ticket.amount}
+                        /52
                       </span>
                     </p>
                   </label>

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import barcode from "../assets/images/barcode.webp";
-import ticketBg from "../assets/images/bg.png";
+import TicketContainer from "../components/TicketContainer";
 import { CURRENT_TICKET_KEY } from "../data";
 import { useTicketContext } from "../schema/TicketProvider";
 
@@ -15,29 +15,27 @@ const Step3Printout = () => {
   };
 
   return (
-    <main className="flex h-full w-full items-center justify-center px-5 pt-[26px] pb-16 text-white">
-      <section className="border-greenish bg-LightGreen md:bg-bgGreener flex max-w-3xl flex-col gap-8 rounded-3xl border border-solid px-6 py-8">
-        <div>
+    <main className="flex h-full w-full items-center justify-center px-5 pt-[26px] pb-16 text-white md:pt-[54px]">
+      <section className="border-greenish bg-LightGreen md:bg-bgGreener xs:max-w-[345px] flex flex-col gap-8 rounded-3xl border border-solid px-6 py-8 md:max-w-3xl lg:p-12">
+        <div className="flex flex-col gap-3">
           <div className="flex items-center justify-between gap-3">
             <h1 className="font-jeju text-2xl">Ready</h1>
             <p>Step 3/3</p>
           </div>
+          <span className="bg-bgGreen h-1 w-full">
+            <span className="bg-subGreen block h-full w-full"></span>
+          </span>
         </div>
-        <span className="bg-bgGreen -mt-5 h-1 w-full md:-mt-6 md:-mb-6">
-          <span className="bg-subGreen block h-full w-full"></span>
-        </span>
-        <div className="mt-8">
-          <div className="mb-16 flex w-full flex-col items-center gap-3 text-center">
-            <h1 className="text-2xl font-bold">Your Ticket is Booked!</h1>
+        <div>
+          <div className="text-whitish mb-16 flex w-full flex-col items-center gap-3 text-center">
+            <h1 className="text-2xl leading-[33.6px] font-bold">
+              Your Ticket is Booked!
+            </h1>
             <p>You can download or Check your email for a copy</p>
           </div>
 
           <div className="relative mx-auto max-w-[300px] rounded-[30px]">
-            <img
-              src={ticketBg}
-              alt=""
-              className="xs:h-[670px] i13:h-[610px] i14:h-[620px] i14p:h-[595px] w-full"
-            />
+            <TicketContainer width="300" height="600" className="" />
             <div className="absolute top-0 w-full rounded-2xl p-5">
               <div className="border-subGreen flex flex-col items-center gap-5 rounded-2xl border border-solid p-3.5">
                 <div>
@@ -101,7 +99,7 @@ const Step3Printout = () => {
                   </div>
                 </div>
               </div>
-              <div className="xs:mt-15 i13:mt-13 i14:mt-15 i14p:mt-14 h-16">
+              <div className="xs:mt-15 i13:mt-11 i14:mt-11 i14p:mt-11 h-16">
                 <img
                   src={barcode}
                   alt="barcode"
@@ -113,7 +111,7 @@ const Step3Printout = () => {
           <div className="mt-[30px] flex flex-col gap-4 pt-6 md:flex-row-reverse">
             <button
               onClick={handleDownload}
-              className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center capitalize md:w-[290px]"
+              className="bg-subGreen font-jeju w-full cursor-pointer rounded-lg px-6 py-3 text-center capitalize md:w-[290px]"
             >
               Download Ticket
             </button>
@@ -126,7 +124,7 @@ const Step3Printout = () => {
             </Link>
           </div>
         </div>
-      </section>{" "}
+      </section>
     </main>
   );
 };

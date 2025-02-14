@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import GlowBackground from "./GlowBackground";
 import Header from "./Header";
 
 const RootLayout = () => {
@@ -6,7 +7,7 @@ const RootLayout = () => {
     <>
       <Header />
       <Outlet />
-      <div></div>
+      <GlowBackground className="hidden lg:block" />
     </>
   );
 };
