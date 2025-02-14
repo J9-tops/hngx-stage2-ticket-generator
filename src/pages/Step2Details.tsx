@@ -1,6 +1,7 @@
 import "react-circular-progressbar/dist/styles.css";
-import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import ProfileUploader from "../components/ProfileUploader";
+import ProgressBar from "../components/ProgressBar";
 import { useStep2Form } from "../hooks/useForm";
 
 const Step2Details = () => {
@@ -15,9 +16,7 @@ const Step2Details = () => {
             <h1 className="font-jeju text-2xl">Attendee Details</h1>
             <p>Step 2/3</p>
           </div>
-          <span className="bg-bgGreen h-1 w-full">
-            <span className="bg-subGreen block h-full w-[66%]"></span>
-          </span>
+          <ProgressBar prev={33} current={66} />
         </div>
         <div className="md:bg-LightGreen md:border-bgGreen bg-transparent md:rounded-4xl md:border md:border-solid md:p-6">
           <div className="flex flex-col gap-8">
@@ -96,18 +95,12 @@ const Step2Details = () => {
                   ></textarea>
                 </div>
                 <div className="flex flex-col gap-4 md:flex-row-reverse">
-                  <button
-                    type="submit"
-                    className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center capitalize md:w-[270px]"
-                  >
-                    Get my free ticket
-                  </button>
-                  <Link
-                    to=".."
-                    className="border-subGreen font-jeju text-subGreen lg w-full rounded-lg border border-solid bg-transparent px-6 py-3 text-center md:w-[270px]"
-                  >
-                    Back
-                  </Link>
+                  <Button type="submit">
+                    <span>Get my free ticket</span>
+                  </Button>
+                  <Button variant="outlined" to="..">
+                    <span>Back</span>
+                  </Button>
                 </div>
               </form>
             </div>

@@ -1,5 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import barcode from "../assets/images/barcode.webp";
+import Button from "../components/Button";
+import ProgressBar from "../components/ProgressBar";
 import TicketContainer from "../components/TicketContainer";
 import { CURRENT_TICKET_KEY } from "../data";
 import { useTicketContext } from "../schema/TicketProvider";
@@ -22,9 +24,7 @@ const Step3Printout = () => {
             <h1 className="font-jeju text-2xl">Ready</h1>
             <p>Step 3/3</p>
           </div>
-          <span className="bg-bgGreen h-1 w-full">
-            <span className="bg-subGreen block h-full w-full"></span>
-          </span>
+          <ProgressBar prev={66} current={100} />
         </div>
         <div>
           <div className="text-whitish mb-16 flex w-full flex-col items-center gap-3 text-center">
@@ -36,7 +36,7 @@ const Step3Printout = () => {
 
           <div className="relative mx-auto max-w-[300px] rounded-[30px]">
             <TicketContainer width="300" height="600" className="" />
-            <div className="absolute top-0 w-full rounded-2xl p-5">
+            <div className="absolute top-0 min-h-[600px] w-full rounded-2xl p-5">
               <div className="border-subGreen flex flex-col items-center gap-5 rounded-2xl border border-solid p-3.5">
                 <div>
                   <h2 className="font-rage text-center text-[34px] leading-8">
@@ -99,7 +99,7 @@ const Step3Printout = () => {
                   </div>
                 </div>
               </div>
-              <div className="xs:mt-15 i13:mt-11 i14:mt-11 i14p:mt-11 h-16">
+              <div className="absolute right-[16px] bottom-[22px] h-16 w-full max-w-[255px]">
                 <img
                   src={barcode}
                   alt="barcode"
@@ -109,19 +109,12 @@ const Step3Printout = () => {
             </div>
           </div>
           <div className="mt-[30px] flex flex-col gap-4 pt-6 md:flex-row-reverse">
-            <button
-              onClick={handleDownload}
-              className="bg-subGreen font-jeju w-full cursor-pointer rounded-lg px-6 py-3 text-center capitalize md:w-[290px]"
-            >
+            <Button onClick={handleDownload} type="button">
               Download Ticket
-            </button>
-            <Link
-              to=".."
-              relative="path"
-              className="border-subGreen font-jeju text-subGreen lg w-full rounded-lg border border-solid bg-transparent px-6 py-3 text-center md:w-[290px]"
-            >
-              Book Another Ticket
-            </Link>
+            </Button>
+            <Button variant="outlined" to="..">
+              Book another ticket
+            </Button>
           </div>
         </div>
       </section>

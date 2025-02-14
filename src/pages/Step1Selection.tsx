@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import Select from "../components/Dropdown";
+import ProgressBar from "../components/ProgressBar";
 import { selectOptions, ticketType } from "../data";
 import { useTicketContext } from "../schema/TicketProvider";
 import { AccessType } from "../types";
@@ -38,9 +39,7 @@ const Step1Form = () => {
             </h1>
             <p>Step 1 / 3</p>
           </div>
-          <span className="bg-bgGreen h-1 w-full">
-            <span className="bg-subGreen block h-full w-[33%]"></span>
-          </span>
+          <ProgressBar prev={0} current={33} />
         </div>
         <div className="lg:border-bgGreen lg:bg-LightGreen flex flex-col gap-8 lg:rounded-4xl lg:border lg:border-solid lg:p-6">
           <div className="border-blackygreen title-container relative flex flex-col items-center gap-10 self-stretch rounded-3xl border-2 border-t-0 border-solid px-6 py-4 backdrop-blur-[7px] md:gap-2 lg:p-6">
@@ -113,17 +112,12 @@ const Step1Form = () => {
             />
           </div>
           <div className="flex flex-col gap-4 md:flex-row-reverse">
-            <Link
-              to="/details"
-              className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
-              role="button"
-              tabIndex={0}
-            >
-              Next
-            </Link>
-            <button className="border-subGreen font-jeju text-subGreen w-full rounded-lg border border-solid bg-transparent px-6 py-3 text-center focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600">
-              Cancel
-            </button>
+            <Button to="/details">
+              <span>Next</span>{" "}
+            </Button>
+            <Button variant="outlined">
+              <span>Cancel</span>
+            </Button>
           </div>
         </div>
       </section>
