@@ -37,7 +37,7 @@ const ProfileUploader = ({ errors, setValue, clearErrors }: Props) => {
 
   return (
     <>
-      <div className="border-blackygreen bg-blackergreen relative flex flex-col gap-3 self-stretch overflow-hidden rounded-3xl border-2 border-solid px-6 py-4 pt-6 backdrop-blur-[7px]">
+      <div className="border-blackygreen bg-blackergreen relative flex flex-col gap-3 self-stretch overflow-hidden rounded-3xl border-2 border-solid px-6 pt-6 pb-6 backdrop-blur-[7px]">
         <h1 className="text-whitish">Upload Profile Photo</h1>
         <div className="relative flex h-full w-full items-center justify-center">
           <div className="md:bg-hiddenBg hidden w-full md:absolute md:top-1/2 md:-z-10 md:block md:h-[80%] md:-translate-y-1/2 md:transform"></div>

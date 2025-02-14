@@ -8,19 +8,20 @@ const Step2Details = () => {
     useStep2Form();
 
   return (
-    <main className="flex h-full w-full items-center justify-center px-5 pt-[15px] pb-16 text-white md:pt-[30px] md:pb-28">
-      <section className="border-greenish bg-bgGreener flex max-w-[604px] flex-col gap-8 rounded-[40px] border border-solid p-6 md:rounded-3xl md:p-12">
-        <div>
+    <main className="flex h-full w-full items-center justify-center px-5 pt-[15px] pb-16 text-white md:pt-[54px] md:pb-28">
+      <section className="border-greenish bg-bgGreener flex max-w-[700px] flex-col gap-8 rounded-[40px] border border-solid p-6 md:rounded-3xl md:p-12">
+        <div className="flex flex-col gap-3">
           <div className="flex flex-row items-center justify-between gap-3">
             <h1 className="font-jeju text-2xl">Attendee Details</h1>
             <p>Step 2/3</p>
           </div>
+          <span className="bg-bgGreen h-1 w-full">
+            <span className="bg-subGreen block h-full w-[66%]"></span>
+          </span>
         </div>
-        <span className="bg-bgGreen -mt-5 h-1 w-full md:-mt-6">
-          <span className="bg-subGreen block h-full w-[66%]"></span>
-        </span>
         <div className="md:bg-LightGreen md:border-bgGreen bg-transparent md:rounded-4xl md:border md:border-solid md:p-6">
-          <div className="lg:border-bgGreen lg:bg-LightGreen flex flex-col gap-8 lg:rounded-4xl lg:border lg:border-solid lg:p-6">
+          <div className="flex flex-col gap-8">
+            {/* <div className="md:border-transparent flex flex-col gap-8 md:rounded-4xl lg:border lg:border-solid lg:bg-transparent lg:p-6"> */}
             <ProfileUploader
               errors={errors}
               setValue={setValue}

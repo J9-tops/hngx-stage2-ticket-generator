@@ -3,15 +3,15 @@ import arrow from "../assets/images/arrow.png";
 import logo from "../assets/images/logo.png";
 const Header = () => {
   return (
-    <header className="w-full px-[27.5px] py-2.5">
-      <div className="border-greenish mx-auto flex max-w-[1200px] items-center justify-between rounded-[12px] border border-solid px-4 py-3 text-white">
+    <header className="w-full px-[27.5px] py-2.5 pt-6">
+      <div className="border-greenish mx-auto flex max-w-[1200px] items-center justify-between rounded-xl border border-solid px-4 py-3 text-white lg:rounded-3xl">
         <div className="h-[36px] w-[92px]">
           <img
             src={logo}
             alt="logo"
             width="92"
             height="36"
-            className="w-[75px] sm:w-full"
+            className="w-[91.79px] sm:w-full"
           />
         </div>
         <ul className="font-jeju text-greyish hidden items-center gap-4 text-lg md:flex">

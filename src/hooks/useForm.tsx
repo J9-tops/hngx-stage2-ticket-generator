@@ -39,7 +39,7 @@ export const useStep2Form = () => {
     updateField("request", data.request || "");
 
     if (data.profilePicture instanceof File) {
-      updateField("profilePicture", formData.profilePicture); // Save URL instead of file object
+      updateField("profilePicture", formData.profilePicture);
     }
 
     saveTicket();

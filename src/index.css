@@ -104,6 +104,7 @@ body {
   );
   -webkit-filter: blur(50px);
   filter: blur(50px);
+  z-index: -1;
 }
 
 .circle {
