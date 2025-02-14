@@ -41,7 +41,7 @@ const Step2Details = () => {
                   <input
                     {...register("name")}
                     type="text"
-                    className="border-blackygreen focus:border-blackygreen focus:ring-blackygreen rounded-xl border border-solid bg-transparent outline-none"
+                    className="border-blackygreen focus:border-blackygreen focus:ring-blackygreen rounded-xl border border-solid bg-transparent p-3 outline-none focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                   />
                 </div>
                 {errors.name && (
@@ -68,7 +68,7 @@ const Step2Details = () => {
                       {...register("email")}
                       type="text"
                       id="email"
-                      className="border-blackygreen focus:border-blackygreen focus:ring-blackygreen block w-full rounded-lg border bg-transparent p-2.5 ps-10 text-sm text-white"
+                      className="border-blackygreen focus:border-blackygreen focus:ring-blackygreen block w-full rounded-lg border bg-transparent p-3 ps-10 text-sm text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                       placeholder="name@provider.com"
                     />
                   </div>
@@ -91,7 +91,7 @@ const Step2Details = () => {
                     {...register("request")}
                     id="request"
                     rows={3}
-                    className="border-blackygreen focus:ring-blackygreen focus:border-blackygreen block w-full resize-none rounded-xl border bg-transparent p-2.5 text-sm text-white"
+                    className="border-blackygreen focus:ring-blackygreen focus:border-blackygreen block w-full resize-none rounded-xl border bg-transparent p-2.5 text-sm text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                     placeholder="Write your thoughts here..."
                   ></textarea>
                 </div>

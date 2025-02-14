@@ -76,12 +76,12 @@ const Step1Form = () => {
                     name="ticketType"
                     checked={formData.ticket.id === ticket.id}
                     onChange={() => handleTicketSelect(ticket)}
-                    className="peer sr-only"
+                    className="peer sr-only focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                   />
                   <label
                     key={ticket.type}
                     htmlFor={ticket.id}
-                    className="border-greenish hover:bg-greenHover peer-checked:bg-lighterGreen flex cursor-pointer justify-between rounded-[12px] border border-solid p-3 md:w-[158px]"
+                    className="border-greenish hover:bg-greenHover peer-checked:bg-lighterGreen flex cursor-pointer justify-between rounded-[12px] border border-solid p-3 focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600 md:w-[158px]"
                     tabIndex={0}
                   >
                     <p className="text-whitish flex flex-col text-sm">
@@ -115,13 +115,13 @@ const Step1Form = () => {
           <div className="flex flex-col gap-4 md:flex-row-reverse">
             <Link
               to="/details"
-              className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center"
+              className="bg-subGreen font-jeju w-full rounded-lg px-6 py-3 text-center focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
               role="button"
               tabIndex={0}
             >
               Next
             </Link>
-            <button className="border-subGreen font-jeju text-subGreen w-full rounded-lg border border-solid bg-transparent px-6 py-3 text-center">
+            <button className="border-subGreen font-jeju text-subGreen w-full rounded-lg border border-solid bg-transparent px-6 py-3 text-center focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600">
               Cancel
             </button>
           </div>

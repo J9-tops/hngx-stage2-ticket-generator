@@ -93,7 +93,7 @@ export default function Select({
         }
         tabIndex={0}
         title="custom select"
-        className="border-blackygreen flex cursor-pointer items-center justify-between rounded-xl border border-solid bg-transparent p-2 lg:p-3"
+        className="border-blackygreen flex cursor-pointer items-center justify-between rounded-xl border border-solid bg-transparent p-2 focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600 lg:p-3"
         onClick={() => setOpen(!open)}
         onKeyDown={handleKeyDown}
       >
@@ -122,7 +122,7 @@ export default function Select({
               key={option.value}
               aria-selected={selected === option.value ? "true" : "false"}
               tabIndex={highlightedIndex === index ? 0 : -1}
-              className={`hover:bg-lighterGreen cursor-pointer border-b border-solid p-2 last:border-b-0 ${
+              className={`hover:bg-lighterGreen border-blackygreen cursor-pointer border-b border-solid p-2 last:border-b-0 ${
                 highlightedIndex === index ? "bg-lightBlue" : ""
               }`}
               onClick={() => handleSelect(option.value)}

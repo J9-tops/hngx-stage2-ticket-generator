@@ -61,13 +61,13 @@ const ProfileUploader = ({ errors, setValue, clearErrors }: Props) => {
                 <>
                   <input
                     type="file"
-                    className="hidden"
+                    className="hidden focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                     onChange={handleFileUpload}
                     id="profilePhoto"
                     ref={fileRef}
                   />
                   <div
-                    className="border-subGreen relative h-[240px] w-[240px] cursor-pointer overflow-hidden rounded-4xl border-4 border-solid"
+                    className="border-subGreen relative h-[240px] w-[240px] cursor-pointer overflow-hidden rounded-4xl border-4 border-solid focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
                     onMouseOver={handleMouseOver}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -78,7 +78,7 @@ const ProfileUploader = ({ errors, setValue, clearErrors }: Props) => {
                       onClick={triggerFileSelect}
                       onDragOver={handleDragOver}
                       onDrop={handleDrop}
-                      className={`aspect-square h-full w-full ${hover ? "opacity-60" : ""}`}
+                      className={`aspect-square h-full w-full focus:border focus:border-solid focus:border-blue-600 focus-visible:border focus-visible:border-solid focus-visible:border-blue-600 ${hover ? "opacity-60" : ""}`}
                     />
                     {hover && (
                       <div
@@ -104,7 +104,7 @@ const ProfileUploader = ({ errors, setValue, clearErrors }: Props) => {
               onDragOver={handleDragOver}
               onDrop={handleDrop}
               htmlFor="profilePhoto"
-              className="border-subGreen bg-bgGreen flex h-[240px] w-[240px] cursor-pointer flex-col justify-center rounded-4xl border-4 border-solid p-6 py-10"
+              className="border-subGreen bg-bgGreen flex h-[240px] w-[240px] cursor-pointer flex-col justify-center rounded-4xl border-4 border-solid p-6 py-10 focus-within:ring-4 focus-within:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-600"
             >
               <input
                 type="file"
