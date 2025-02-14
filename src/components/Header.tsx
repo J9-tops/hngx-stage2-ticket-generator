@@ -42,7 +42,7 @@ const Header = () => {
         </ul>
         <Link
           to="/tickets"
-          className="font-jeju flex justify-between gap-2 rounded-[12px] bg-white px-4 py-3 text-black"
+          className="font-jeju onHover flex justify-between gap-2 rounded-[12px] border border-solid border-white bg-white px-4 py-2.5 text-black"
         >
           <span className="text-[10px] md:text-[16px]">MY TICKETS</span>
           <img

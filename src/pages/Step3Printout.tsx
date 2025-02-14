@@ -99,7 +99,7 @@ const Step3Printout = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute right-[16px] bottom-[22px] h-16 w-full max-w-[255px]">
+              <div className="absolute right-[21px] bottom-[22px] h-16 w-full max-w-[255px]">
                 <img
                   src={barcode}
                   alt="barcode"

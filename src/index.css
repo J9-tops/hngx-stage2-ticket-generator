@@ -70,3 +70,18 @@ body {
     ),
     rgba(10, 12, 17, 0.1);
 }
+
+.onhover {
+  box-sizing: border-box;
+}
+
+.onHover:hover {
+  background: var(--color-subGreen);
+  color: white;
+
+  img {
+    transform: rotate(-45deg);
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+  }
+}
