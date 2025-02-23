@@ -94,6 +94,11 @@ const Step2Details = () => {
                     placeholder="Write your thoughts here..."
                   ></textarea>
                 </div>
+                {errors.request && (
+                  <p className="-mt-7.5 w-full text-[13px] text-red-500">
+                    {errors.request.message}
+                  </p>
+                )}
                 <div className="flex flex-col gap-4 md:flex-row-reverse">
                   <Button type="submit">
                     <span>Get my free ticket</span>
