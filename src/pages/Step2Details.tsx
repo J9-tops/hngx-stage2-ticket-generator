@@ -95,7 +95,7 @@ const Step2Details = () => {
                   ></textarea>
                 </div>
                 {errors.request && (
-                  <p className="-mt-7.5 w-full text-[13px] text-red-500">
+                  <p className="-mt-5 w-full text-[13px] text-red-500">
                     {errors.request.message}
                   </p>
                 )}
