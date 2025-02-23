@@ -26,7 +26,7 @@ export const formSchema = z.object({
       }),
     z.string().url(),
   ]),
-  request: z.string().optional(),
+  request: z.string().min(3, "Please tell us what you want!"),
 });
 
 export type FormType = z.infer<typeof formSchema> & {
